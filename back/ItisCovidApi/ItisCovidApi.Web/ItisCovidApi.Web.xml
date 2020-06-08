@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ItisCovidApi.Web</name>
+    </assembly>
+    <members>
+        <member name="M:ItisCovidApi.Web.Controllers.HelloController.Get">
+            <summary>
+            Hello command 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ItisCovidApi.Web.Models.HelpTask.Latitude">
+            <summary>
+            Широта
+            </summary>
+        </member>
+        <member name="P:ItisCovidApi.Web.Models.HelpTask.Longitude">
+            <summary>
+            Долгота
+            </summary>
+        </member>
+        <member name="P:ItisCovidApi.Web.Models.OperationResult.Success">
+            <summary>
+            Признак успешности операции.
+            </summary>
+        </member>
+        <member name="P:ItisCovidApi.Web.Models.OperationResult.Message">
+            <summary>
+            Сообщение об ошибке.
+            </summary>
+        </member>
+        <member name="P:ItisCovidApi.Web.Models.OperationResult.Data">
+            <summary>
+            Данные.
+            </summary>
+        </member>
+    </members>
+</doc>

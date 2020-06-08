@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_bg">
+
+    <ImageButton
+        android:id="@+id/newTaskFrag_cancel_imButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_baseline_cancel_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/newTaskFrag_addDescription_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="Добавить задание"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newTaskFrag_cancel_imButton" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/newTaskFrag_name_til"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newTaskFrag_addDescription_tv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/newTaskFrag_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:hint="Имя"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/newTaskFrag_phoneNumber_til"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newTaskFrag_name_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/newTaskFrag_phoneNumber_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789+"
+            android:hint="Телефон"
+            android:imeOptions="actionNext"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/newTaskFrag_address_til"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newTaskFrag_phoneNumber_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/newTaskFrag_address_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Адрес"
+            android:imeOptions="actionNext"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/newTaskFrag_description_til"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newTaskFrag_address_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/newTaskFrag_description_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Описание"
+            android:imeOptions="actionDone"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnNewTask"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_main_rounded_bg"
+        android:text="Добавить задание"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newTaskFrag_description_til" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+image: docker:latest
+
+stages:
+    - deploy
+
+services:
+    - docker:dind
+
+variables:
+    DOCKER_DRIVER: overlay
+
+before_script:
+    - docker login -u _ -p $HEROKU_API_KEY registry.heroku.com
+    - apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community nodejs-npm
+    - npm i -g heroku
+
+deploy-develop:
+    stage: deploy
+    script:
+        - docker build -t $CI_REGISTRY/$HEROKU_API_NAME/web -f Dockerfile .
+        - docker push $CI_REGISTRY/$HEROKU_API_NAME/web
+        - heroku container:release web --app $HEROKU_API_NAME
+    only:
+        - master

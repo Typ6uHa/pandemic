@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_map">
+
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="ru.aizat.diplom.ui.map.MapFragment"
+        android:label="Карта заболеваний"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/nav_tasks"
+        android:name="ru.aizat.diplom.ui.tasks.TasksFragment"
+        android:label="Задания"
+        tools:layout="@layout/fragment_tasks" />
+</navigation>

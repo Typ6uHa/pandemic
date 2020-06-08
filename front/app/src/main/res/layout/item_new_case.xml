@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_bg">
+
+    <ImageButton
+        android:id="@+id/newCaseFrag_cancel_imButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_baseline_cancel_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/newCaseFrag_addNewCase_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="Новый случай"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newCaseFrag_cancel_imButton" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/newCaseFrag_symptoms_til"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newCaseFrag_addNewCase_tv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/newCaseFrag_symptoms_et"
+            android:layout_width="match_parent"
+            android:imeOptions="actionNext"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:hint="Симптомы" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/newCaseFrag_age_til"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newCaseFrag_symptoms_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/newCaseFrag_age_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789+"
+            android:hint="Возраст"
+            android:imeOptions="actionNext"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/newCaseFrag_geo_til"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newCaseFrag_age_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/newCaseFrag_geo_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:hint="Геоданные"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_main_rounded_bg"
+        android:text="Добавить случай"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newCaseFrag_geo_til" />
+</androidx.constraintlayout.widget.ConstraintLayout>
